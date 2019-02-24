@@ -32,12 +32,15 @@ import win32gui
 hwnd = win32gui.FindWindow(None, r'Super Mario Bros 1-1')
 win32gui.SetForegroundWindow(hwnd)
 dimensions = win32gui.GetWindowRect(hwnd)
-
+i = 1
 while True:
+    time.sleep(1)
     plt.figure(1)
     image = ImageGrab.grab(dimensions)
-    plt.imshow(image)
-    plt.show()
+#    plt.imshow(image)
+    plt.imsave("image_processing\screens\screen"+str(i)+".jpg", np.array(image))
+    i = i + 1
+#    plt.show()
 #    print(image)
 #    cv2.imshow('Image', np.array(image))
 #position = pyautogui.locateOnScreen("mario_title.jpg", confidence = 0.1)
