@@ -2,3 +2,7 @@
 
 # super-mario-reinforcement-learning
 Developing Reinforcement Learning Agent that can play Super Mario
+
+This repository has been forked from: https://github.com/justinmeister/Mario-Level-1
+
+
