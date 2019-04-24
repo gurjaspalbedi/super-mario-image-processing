@@ -41,14 +41,17 @@ while True:
 #    plt.figure(1)
     image = ImageGrab.grab(dimensions)
     image_np = np.array(image)
+    time.sleep(3)
+    plt.imsave("battak\screen"+str(i)+".jpg", np.array(image_np))
+    i = i +1
 #    print(image_np.shape)
-    for m in range(0, image_np.shape[0]-50,50):
-        for n in range(0, image_np.shape[1]-50,50):
-            partition = image_np[m: m + 50, n:n + 50]
-            all_partitions.append(partition)
-            if i < 5000:
-#            np.savez_compressed('numpy_data.npz', all_partitions)
-                plt.imsave("partitions\partition"+str(i)+".jpg", np.array(partition))
-#    plt.imshow(image)
-#    plt.imsave("image_processing\screens\screen"+str(i)+".jpg", np.array(image))
-            i = i + 1
+#    for m in range(0, image_np.shape[0]-50,50):
+#        for n in range(0, image_np.shape[1]-50,50):
+#            partition = image_np[m: m + 50, n:n + 50]
+#            all_partitions.append(partition)
+#            if i < 5000:
+##            np.savez_compressed('numpy_data.npz', all_partitions)
+#                plt.imsave("partitions\partition"+str(i)+".jpg", np.array(partition))
+##    plt.imshow(image)
+##    plt.imsave("image_processing\screens\screen"+str(i)+".jpg", np.array(image))
+#            i = i + 1
